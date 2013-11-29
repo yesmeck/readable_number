@@ -1,5 +1,9 @@
-require "readable_number/version"
+require 'readable_number/version'
 
 module ReadableNumber
-  # Your code goes here...
+  def hundred
+    self * 100
+  end
 end
+
+Numeric.send(:include, ReadableNumber)
